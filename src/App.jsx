@@ -27,32 +27,29 @@ function App() {
           </Navlink>
         </div>
 
-        <Navlink>
-          <a href="#top">
-            <p>Home</p>
-            <img
-              src={"https://cdn-icons-png.flaticon.com/512/25/25694.png"}
-            ></img>
-          </a>
-        </Navlink>
+        <Navlink
+          href="#top"
+          name="Home"
+          src="https://cdn-icons-png.flaticon.com/512/25/25694.png"
+        />
 
-        <Navlink>
-          <a href="#main">
-            <p>About</p>
-            <img
-              src={"https://cdn-icons-png.flaticon.com/512/1/1176.png"}
-            ></img>
-          </a>
-        </Navlink>
+        <Navlink
+          href="#main"
+          name="About"
+          src="https://cdn-icons-png.flaticon.com/512/1/1176.png"
+        />
 
-        <Navlink>
-          <a href="#footer">
-            <p>Footer</p>
-            <img
-              src={"https://cdn-icons-png.flaticon.com/512/3596/3596207.png"}
-            ></img>
-          </a>
-        </Navlink>
+        <Navlink
+          href="#projects"
+          name="Projects"
+          src="https://cdn-icons-png.flaticon.com/512/4257/4257460.png"
+        />
+
+        <Navlink
+          href="#footer"
+          name="Contact"
+          src="https://cdn-icons-png.flaticon.com/512/7269/7269995.png"
+        />
       </nav>
 
       <header>
@@ -107,7 +104,7 @@ function App() {
               mitt med andre kode-språk.
             </p>
           </article>
-          {pitchWindow()}
+          {PitchWindow()}
         </div>
       </header>
 
@@ -117,99 +114,60 @@ function App() {
             <h2>Knowledge</h2>
             <h3>Code</h3>
             <div class="knowledge_wrapper">
-              <figure class="img_wrap">
-                <img
-                  src={"https://cdn-icons-png.flaticon.com/512/186/186320.png"}
-                  alt="HyperText Markup Language"
-                />
-              </figure>
-              <figure class="img_wrap">
-                <img
-                  src={"https://cdn-icons-png.flaticon.com/512/802/802251.png"}
-                  alt="Cascading StyleSheets"
-                />
-              </figure>
-              <figure class="img_wrap">
-                <img
-                  src={
-                    "https://cdn-icons-png.flaticon.com/512/1892/1892549.png"
-                  }
-                  alt="JavaScript"
-                />
-              </figure>
+              <MySkillsImage
+                src="https://cdn-icons-png.flaticon.com/512/186/186320.png"
+                alt="HyperText Markup Language"
+              />
+              <MySkillsImage
+                src="https://cdn-icons-png.flaticon.com/512/802/802251.png"
+                alt="Cascading StyleSheets"
+              />
+              <MySkillsImage
+                src="https://cdn-icons-png.flaticon.com/512/1892/1892549.png"
+                alt="JavaScript"
+              />
             </div>
 
             <h3>Source code editors</h3>
             <div class="knowledge_wrapper">
-              <figure class="img_wrap">
-                <img
-                  src={
-                    "https://cdn-icons-png.flaticon.com/512/3334/3334886.png"
-                  }
-                  alt="React"
-                />
-              </figure>
-              <figure class="img_wrap">
-                <img
-                  src={"https://cdn-icons-png.flaticon.com/512/906/906324.png"}
-                  alt="VSC"
-                />
-              </figure>
+              <MySkillsImage
+                src="https://cdn-icons-png.flaticon.com/512/3334/3334886.png"
+                alt="React"
+              />
+              <MySkillsImage
+                src="https://cdn-icons-png.flaticon.com/512/906/906324.png"
+                alt="VSC"
+              />
             </div>
 
             <h3>Design</h3>
             <div class="knowledge_wrapper">
-              <figure class="img_wrap">
-                <a
-                  href="https://www.figma.com/files/project/74340755/Joakim?fuid=1166284176523730225"
-                  target="_blank"
-                >
-                  <img
-                    src={
-                      "https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
-                    }
-                    alt="Figma"
-                  />
-                </a>
-              </figure>
-              <figure class="img_wrap">
-                <img
-                  src={
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/600px-Canva_icon_2021.svg.png?20220821125247"
-                  }
-                  alt="ClickUp"
-                />
-              </figure>
-              <figure class="img_wrap">
-                <img
-                  src={
-                    "https://cdn-icons-png.flaticon.com/512/1147/1147155.png"
-                  }
-                  alt="Photoshop"
-                />
-              </figure>
+              <MySkillsImageLinked
+                src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
+                alt="Figma"
+                href="https://www.figma.com/files/project/74340755/Joakim?fuid=1166284176523730225"
+              />
+              <MySkillsImage
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/600px-Canva_icon_2021.svg.png?20220821125247"
+                alt="ClickUp"
+              />
+              <MySkillsImage
+                src="https://cdn-icons-png.flaticon.com/512/1147/1147155.png"
+                alt="Photoshop"
+              />
             </div>
 
             <h3>Repository</h3>
             <div class="knowledge_wrapper">
-              <figure class="img_wrap">
-                <img
-                  src={
-                    "https://cdn-icons-png.flaticon.com/512/1680/1680899.png"
-                  }
-                  alt="Git"
-                />
-              </figure>
-              <figure class="img_wrap">
-                <a href="https://github.com/VilloKodeHode" target="_blank">
-                  <img
-                    src={
-                      "https://cdn-icons-png.flaticon.com/512/4494/4494749.png"
-                    }
-                    alt="GitHub"
-                  />
-                </a>
-              </figure>
+              <MySkillsImage
+                src="https://cdn-icons-png.flaticon.com/512/1680/1680899.png"
+                alt="Git"
+              />
+              <MySkillsImageLinked
+                src="https://cdn-icons-png.flaticon.com/512/4494/4494749.png"
+                alt="GitHub"
+                href="https://github.com/VilloKodeHode"
+              />
             </div>
           </div>
 
@@ -258,109 +216,36 @@ function App() {
         <section class="container-4" id="projects">
           <h2>Projects</h2>
           <div class="projects_wrapper">
-            <div class="outer-wrapper">
-              <div class="wrapper">
-                <a
-                  href="https://villokodehode.github.io/Job-simulator/"
-                  target="_blank"
-                >
-                  <figure class="img_wrap">
-                    <h3>
-                      Job <br />
-                      simulator
-                    </h3>
-                    <img src={jobSimulator} />
-                    <p>
-                      Et prosjekt jeg har gradvis bygd mer og mer kompleks
-                      ettersom jeg har lært mer
-                    </p>
-                  </figure>
-                </a>
-              </div>
-              <a
-                href="https://github.com/VilloKodeHode/Job-simulator"
-                target="_blank"
-              >
-                <p class="description">(Kode)</p>
-              </a>
-            </div>
-            <div class="outer-wrapper">
-              <div class="wrapper">
-                <a
-                  href="https://villokodehode.github.io/Christmas-Calender/"
-                  target="_blank"
-                >
-                  <figure class="img_wrap">
-                    <h3>
-                      Christmas
-                      <br />
-                      Calender
-                      <br />
-                    </h3>
-                    <img src={calendar} />
-                    <p>
-                      Et samarbeidsprosjekt hvor jeg har laget min egen variant.
-                    </p>
-                  </figure>
-                </a>
-              </div>
-              <a
-                href="https://github.com/VilloKodeHode/Christmas-Calender"
-                target="_blank"
-              >
-                <p class="description">(Kode)</p>
-              </a>
-            </div>
-            <div class="outer-wrapper">
-              <div class="wrapper">
-                <a
-                  href="https://www.figma.com/file/sCZngSCqMOKbRciWTLZodh/Vallhala-Beards?node-id=0%3A1&t=c4JqLQ0yMjR0gZQ0-0"
-                  target="_blank"
-                >
-                  <figure class="img_wrap">
-                    <h3>
-                      Valhalla
-                      <br />
-                      Beards
-                      <br />
-                    </h3>
-                    <img src={valBeards} />
-                    <p>Figma prosjekt for en imaginær barbershop</p>
-                  </figure>
-                </a>
-              </div>
-              <a
-                href="https://github.com/VilloKodeHode/Christmas-Calender"
-                target="_blank"
-              >
-                <p class="description">(Kode)</p>
-              </a>
-            </div>
-            <div class="outer-wrapper">
-              <div class="wrapper">
-                <a
-                  href="https://villokodehode.github.io/CSS-art/"
-                  target="_blank"
-                >
-                  <figure class="img_wrap">
-                    <h3>
-                      CSS
-                      <br />
-                      Art
-                      <br />
-                    </h3>
-                    <img src={cssArt} />
-                    <p>Trying out som CSS art</p>
-                  </figure>
-                </a>
-              </div>
-              <a
-                href="https://github.com/VilloKodeHode/CSS-art"
-                target="_blank"
-              >
-                <p class="description">(Kode)</p>
-              </a>
-            </div>
+            <Project
+              href="https://villokodehode.github.io/Job-simulator/"
+              projectName="Job simulator"
+              src={jobSimulator}
+              description="Et prosjekt jeg har gradvis bygd mer og mer kompleks ettersom jeg har lært mer"
+              hrefCode="https://villokodehode.github.io/Job-simulator/"
+            />
+
+            <Project
+              href="https://villokodehode.github.io/Christmas-Calender/"
+              projectName="Christmas Calender"
+              src={calendar}
+              description="Et samarbeidsprosjekt hvor jeg har laget min egen variant"
+              hrefCode="https://github.com/VilloKodeHode/Christmas-Calender"
+            />
+
+            <Project
+              href="https://www.figma.com/file/sCZngSCqMOKbRciWTLZodh/Vallhala-Beards?node-id=0%3A1&t=c4JqLQ0yMjR0gZQ0-0"
+              projectName="Valhalla Beards"
+              src={valBeards}
+              description="Figma prosjekt for en imaginær barbershop"
+            />
+
+            <Project
+              href="https://villokodehode.github.io/CSS-art/"
+              projectName="CSS Art"
+              src={cssArt}
+              description="Prøvde å se mulighetene med css"
+              hrefCode="https://github.com/VilloKodeHode/CSS-art"
+            />
           </div>
         </section>
       </main>
@@ -411,25 +296,65 @@ function App() {
   );
 }
 
-function Navlink(props) {
+// function Myskills(props) {
+//   // Destructuring
+//   const { title, text } = props;
+// }
+
+function MySkillsImage(props) {
+  const { src, alt } = props;
   return (
-    <li>
-      <a>{props.children}</a>
-    </li>
+    <figure className="img_wrap">
+      <img src={src} alt={alt} />
+    </figure>
   );
 }
 
-// <nav>
-//   <div className="nav-left-side">
-//     <Navlink>
-//       <img className="company-logo" src={"./src/assets/Logo.png"}></img>
-//     </Navlink>
-//   </div>
+function MySkillsImageLinked(props) {
+  const { src, alt, href } = props;
+  return (
+    <figure className="img_wrap">
+      <a href={href} target="_blank">
+        {" "}
+        <img src={src} alt={alt} />{" "}
+      </a>
+    </figure>
+  );
+}
 
-// function navBar(props) {
-//   console.log(props);
-//   return <div>{props.children}</div>;
-// }
+function Navlink(props) {
+  const { href, name, src } = props;
+  return (
+    <a href={href}>
+      <li>
+        <p>{name}</p>
+        <img src={src} />
+      </li>
+    </a>
+  );
+}
+
+function Project(props) {
+  const { href, projectName, src, description, hrefCode } = props;
+  return (
+    <div class="outer-wrapper">
+      <div class="wrapper">
+        <a href={href} target="_blank">
+          <figure class="img_wrap">
+            <h3>{projectName}</h3>
+            <img src={src} />
+            <p>{description}</p>
+          </figure>
+        </a>
+      </div>
+      <a href={hrefCode} target="_blank">
+        <p class="description">(Kode)</p>
+      </a>
+    </div>
+  );
+}
+
+//! kan jeg bruke en if statement for å ta bort p class description
 
 export default App;
 
@@ -437,8 +362,8 @@ export default App;
 
 function clickCounter() {
   const [count, setCount] = useState(0);
-  if (count % 2) {
-  }
+  // if (count % 2) {
+  // }
 
   return (
     <div className="footer-clicker">
@@ -448,7 +373,7 @@ function clickCounter() {
   );
 }
 
-const pitchWindow = () => {
+const PitchWindow = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
