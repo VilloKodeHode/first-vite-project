@@ -266,12 +266,19 @@ function App() {
             <p>VilloKodeHode@Gmail.com</p>
           </div>
         </div>
-
         <h2 class="footer-logo">
           <span>JV</span>
         </h2>
-
         {clickCounter()}
+        <lifeCycle>
+          <img src="https://cdn-icons-png.flaticon.com/512/2102/2102727.png" />
+          <img src="https://cdn-icons-png.flaticon.com/512/1702/1702342.png" />
+          <img src="https://cdn-icons-png.flaticon.com/512/2880/2880690.png" />
+          <img src="https://cdn-icons-png.flaticon.com/512/6032/6032281.png" />
+          <img src="https://cdn-icons-png.flaticon.com/512/4440/4440953.png" />
+          <img src="https://cdn-icons-png.flaticon.com/512/1742/1742554.png" />
+          <img src="https://cdn-icons-png.flaticon.com/512/252/252129.png" />
+        </lifeCycle>
         <div class="footer-navigate">
           <h3>Navigate</h3>
           <div>
@@ -352,6 +359,10 @@ function Project(props) {
       </a>
     </div>
   );
+}
+
+function lifeCycle(props) {
+  return <div class="lifeCycle">{props.children}</div>;
 }
 
 //! kan jeg bruke en if statement for å ta bort p class description
