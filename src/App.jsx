@@ -419,6 +419,13 @@ function Navlink(props) {
   );
 }
 
+// <nav>
+//   <div className="nav-left-side">
+//     <Navlink>
+//       <img className="company-logo" src={"./src/assets/Logo.png"}></img>
+//     </Navlink>
+//   </div>
+
 // function navBar(props) {
 //   console.log(props);
 //   return <div>{props.children}</div>;
