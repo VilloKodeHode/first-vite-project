@@ -310,6 +310,7 @@ section.knowledge {
   transition: 0.5s ease-in-out;
   display: flex;
   justify-content: center;
+  border-radius: 30%;
 }
 
 div.knowledge_wrapper {
@@ -327,6 +328,11 @@ div.knowledge_wrapper {
   cursor: pointer;
   padding: 5px;
   /* background-color: #9ca3db; */
+}
+
+.hoverEffect:hover {
+  box-shadow: #00055e 10px 10px 10px;
+  transform: scale(1.5);
 }
 
 .myskills {
@@ -381,11 +387,10 @@ div.projects_wrapper {
   /* position: absolute; */
 }
 .container-4 figure.img_wrap {
-  /* grid-row-start: 2; */
-  /* position: absolute; */
   margin: 1em;
-  border: 1px solid #9bb6ff;
-  box-shadow: 0 0 20px #9bb6ff;
+  border: 5px solid #9bb6ff;
+  background-color: #e1f2ff;
+  /* box-shadow: 0 0 20px #9bb6ff; */
   transition: 0.45s ease;
   width: 250px;
   height: 420px;
@@ -406,18 +411,19 @@ div.projects_wrapper {
 }
 
 .container-4 div.wrapper a > :hover {
-  border: 10px solid #9bb6ff;
-  transform: scale(1.1);
+  /* border: 10px solid #9bb6ff; */
+  box-shadow: #00055e 10px 15px 10px;
+  transform: scale(1.2);
 }
 
 .container-4 div.wrapper a > :active {
-  border: 5px solid #9bb6ff;
-  transform: scale(1.1);
+  /* border: 5px solid #9bb6ff;
+  transform: scale(1.1); */
 }
 
 p.description {
   letter-spacing: 0.5vw;
-  padding: 0;
+  padding: 3em 0 0 0;
   font-weight: 600;
   /* margin: auto; */
   text-indent: 0.5vw;
@@ -433,8 +439,8 @@ p.description {
 footer {
   display: grid;
   grid-template-areas:
-    "contact clicker navigate"
-    "logo   empty  cvlinks";
+    "contact clicker    navigate"
+    "logo    lifeCycle  cvlinks";
   grid-template-columns: 1fr 1fr 1fr;
   padding: 3em 0em;
   z-index: 100;
@@ -459,6 +465,10 @@ footer img {
 
 .footer-clicker {
   grid-area: clicker;
+}
+
+.lifeCycle {
+  grid-area: lifeCycle;
 }
 
 .footer-navigate {
@@ -566,4 +576,11 @@ button:focus-visible {
 
 .read-the-docs {
   color: #888;
+}
+
+.test-area {
+  background-color: #00055e;
+  color: white;
+  padding: 50px;
+  margin: 50px;
 }
