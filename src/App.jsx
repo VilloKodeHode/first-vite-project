@@ -1,17 +1,9 @@
-// import logo from "./assets/react.svg";
-import CVstandardpic from "./assets/Standard CV pic space.png";
-import CVstandard from "./assets/Standard CV space.pdf";
-import CVfancy from "./assets/Fancy CV space.png";
-import calendar from "./assets/Christmas calendar.png";
-import cssArt from "./assets/Css art.png";
-import jobSimulator from "./assets/First DOMS.png";
-import valBeards from "./assets/Valhalla beards.png";
 import "./App.css";
-import { render } from "react-dom";
 import { useState } from "react";
 
 //Components:
 //legg inn alle componentene som er lagd inn  her og exporter/importer
+import CompanyLogo from "./components/companyLogo";
 import Card from "./components/Card";
 import PitchWindow from "./components/pitch";
 import { PitchText } from "./components/pitch";
@@ -35,11 +27,7 @@ function App() {
     <div className="App">
       <div id="top"></div>
       <nav>
-        <div className="nav-left-side">
-          <Navlink>
-            <img className="company-logo" src={"./src/assets/Logo.png"}></img>
-          </Navlink>
-        </div>
+        <CompanyLogo href="" src="./src/assets/logo.png" />
 
         <Navlink
           href="#top"
@@ -82,34 +70,45 @@ function App() {
           </p>
         </article>
         <div className="wrapper">
-          <img className="hero" src={"./src/assets/Joakim-in-laptop.png"} />
+          <img className="hero" src={"./src/assets/Looking-right.png"} />
         </div>
         <div className="wrapper cv-wrapper">
-          <a href={CVstandard} target="_blank" className="cv standard">
-            <img className="cv standard" src={CVstandardpic} />
+          <a
+            href={"./src/assets/Standard CV space.pdf"}
+            target="_blank"
+            className="cv standard"
+          >
+            <img
+              className="cv standard"
+              src={"./src/assets/Standard CV pic space.png"}
+            />
             {/* <p className="cv">Full CV</p> */}
           </a>
 
-          <a href={CVfancy} target="_blank" className="cv fancy">
-            <img className="cv fancy" src={CVfancy} />
+          <a
+            href={"./src/assets/Fancy CV space.png"}
+            target="_blank"
+            className="cv fancy"
+          >
+            <img className="cv fancy" src={"./src/assets/Fancy CV space.png"} />
             {/* <p className="cv">Short CV</p> */}
           </a>
         </div>
         <div className="wrapper">
           <article className="header_text">
             <PitchText
-              header="Jeg elsker å kode."
+              title="Jeg elsker å kode."
               text="Jeg koder masse på fritiden og synes det er kjempegøy å lære noe
               nytt. Mestringsfølelsen av å få til noe som jeg har sittet fast
               med lenge er helt fantastisk!"
             />
             <PitchText
-              header="Å bidra i arbeidsmiljøet er for meg veldig viktig."
+              title="Å bidra i arbeidsmiljøet er for meg veldig viktig."
               text="Det å hjelpe andre og motta hjelp med åpne hender synes jeg er
               utrolig viktig i et team."
             />
             <PitchText
-              header="Mitt ønske er å jobbe med UI og UX."
+              title="Mitt ønske er å jobbe med UI og UX."
               text="Jeg har som mål å lære så mye som mulig om dette. JavaScript med React og Vite lærer
               jeg nå, men jeg har et veldig sterkt ønske å utvide repertoaret
               mitt med andre kode-språk."
@@ -230,7 +229,7 @@ function App() {
             <Project
               href="https://villokodehode.github.io/Job-simulator/"
               projectName="Job simulator"
-              src={jobSimulator}
+              src={"./src/assets/First DOMS.png"}
               description="Et prosjekt jeg har gradvis bygd mer og mer kompleks ettersom jeg har lært mer"
               hrefCode="https://villokodehode.github.io/Job-simulator/"
             />
@@ -238,7 +237,7 @@ function App() {
             <Project
               href="https://villokodehode.github.io/Christmas-Calender/"
               projectName="Christmas Calender"
-              src={calendar}
+              src={"./src/assets/Christmas calendar.png"}
               description="Et samarbeidsprosjekt hvor jeg har laget min egen variant"
               hrefCode="https://github.com/VilloKodeHode/Christmas-Calender"
             />
@@ -246,14 +245,14 @@ function App() {
             <Project
               href="https://www.figma.com/file/sCZngSCqMOKbRciWTLZodh/Vallhala-Beards?node-id=0%3A1&t=c4JqLQ0yMjR0gZQ0-0"
               projectName="Valhalla Beards"
-              src={valBeards}
+              src={"./src/assets/Valhalla beards.png"}
               description="Figma prosjekt for en imaginær barbershop"
             />
 
             <Project
               href="https://villokodehode.github.io/CSS-art/"
               projectName="CSS Art"
-              src={cssArt}
+              src={"./src/assets/Css art.png"}
               description="Prøvde å se mulighetene med css"
               hrefCode="https://github.com/VilloKodeHode/CSS-art"
             />
@@ -261,11 +260,11 @@ function App() {
         </section>
       </main>
 
-      <section className="test-area">
+      {/* <section className="test-area">
         {cardInfo.map((element, index) => {
           return <Card key={index} title={element.title} text={element.text} />;
         })}
-      </section>
+      </section> */}
 
       <footer className="footer" id="footer">
         <div className="footer-contact">
@@ -326,7 +325,7 @@ function LifeCycle(props) {
   return <div className="lifeCycle">{props.children}</div>;
 }
 
-//! kan jeg bruke en if statement for å ta bort p className description
+//! kan jeg bruke en if statement for å ta bort p className description?
 
 // <button className="pitch-btn" id="pitch-btn"></button>
 

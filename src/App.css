@@ -108,10 +108,10 @@ nav li {
   /* height: 80px; */
 }
 
-.nav-left-side {
+.company-logo-wrapper {
   display: flex;
   position: absolute;
-  left: 5px;
+  left: 35px;
   top: 35px;
 }
 
