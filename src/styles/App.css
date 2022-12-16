@@ -1,0 +1,159 @@
+@import "/src/components/NavBar/navbar.css";
+@import "/src/components/HeroSection/heroSection.css";
+@import "/src/components/SectionSkillsAndKnowledge/skills.css";
+@import "/src/components/Pitch/pitch.css";
+@import "/src/components/ProjectSection/projectsection.css";
+@import "/src/components/GlowEffect/glowEffect";
+@import "/src/components/CvWithEffectsAndLink/CvEffectsAndLink.css";
+@import "/src/components/FooterSection/footer.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.color-scheme {
+  /* css variabler: */
+  --color-primary-500: blue;
+
+  --color-secondary-500: orange;
+
+  --color-tertinary-500: red;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+:root {
+  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  /* overflow-x: hidden; */
+  background-image: radial-gradient(
+      rgba(148, 163, 243, 0.253) 0%,
+      rgba(197, 203, 255, 0.589) 50%,
+      rgba(18, 129, 156, 0.459) 100%
+    ),
+    linear-gradient(
+      rgba(0, 0, 255, 0.658) 0%,
+      rgba(92, 140, 196, 0.459) 20%,
+      rgba(47, 21, 160, 0.37) 40%,
+      rgba(99, 55, 202, 0.459) 60%,
+      rgba(96, 101, 177, 0.411) 80%,
+      rgba(12, 6, 34, 0.404) 100%
+    );
+}
+
+span {
+  font-size: larger;
+
+  color: #b23a48;
+}
+h1 span {
+  text-shadow: 2px 2px 3px black;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+main {
+  background-color: #e1f2ff;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+img {
+  height: 25px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #000000;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.test-area {
+  background-color: #00055e;
+  color: white;
+  padding: 50px;
+  margin: 50px;
+}

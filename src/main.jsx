@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 // CSS
-import "./App.css";
+import "./styles/App.css";
 
 // Components
 import App from "./App.jsx";

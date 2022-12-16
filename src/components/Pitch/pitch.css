@@ -1,0 +1,35 @@
+.pitch-btn {
+  margin: 2em;
+}
+
+.pitch-close-btn {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  font-size: 0.8em;
+  background-color: transparent;
+}
+
+div.pitch {
+  /* display: none; */
+  z-index: 100;
+  /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  position: fixed;
+  padding: 2em;
+  height: fit-content;
+  top: 15%;
+  bottom: 15%;
+  left: 15%;
+  right: 15%;
+  margin: auto;
+  background-color: #3d79fae0;
+  color: white;
+  border-radius: 15px;
+  backdrop-filter: blur(2px);
+  border: #070b5e7a 1px solid;
+}
+
+.pitch span {
+  color: rgb(253, 120, 120);
+  text-shadow: 1px 1px black;
+}

@@ -1,0 +1,16 @@
+header {
+  min-height: 100vh;
+  /* padding to compensate for navbar: */
+  padding-top: 8em;
+  display: grid;
+  grid-template-rows: 40vh 40vh;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 20px; */
+}
+
+header img.hero {
+  z-index: 0;
+  height: 350px;
+  /* margin-top: 1em; */
+  min-height: 11em;
+}

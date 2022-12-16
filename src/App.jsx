@@ -1,19 +1,27 @@
-import "./App.css";
+import "./styles/App.css";
+
+// import "./styles";
 import { useState } from "react";
+
+//!importen fra styledCssModules (for å linke til modules)
+// import StyledCssModules from "./components/StyledCssModules/StyledCssModules";
 
 //Components:
 //legg inn alle componentene som er lagd inn  her og exporter/importer
-import CompanyLogo from "./components/companyLogo";
+import CompanyLogo from "./components/NavBar/companyLogo";
 import Card from "./components/Card";
-import PitchWindow from "./components/pitch";
-import { PitchText } from "./components/pitch";
-import Navlink from "./components/navlink";
-import Project from "./components/projectcard";
-import MySkillsImage from "./components/skillsicon";
-import { MySkillsImageLinked } from "./components/skillsicon";
+import PitchWindow from "./components/Pitch/pitch.jsx";
+import { PitchText } from "./components/Pitch/pitch.jsx";
+import Navlink from "./components/NavBar/navlink";
+import Cv from "./components/CvWithEffectsAndLink/Cv";
+import Project from "./components/ProjectSection/projectcard";
+import KnowledgeIcon from "./components/SectionSkillsAndKnowledge/skillsicon";
+import { KnowledgeIconLinked } from "./components/SectionSkillsAndKnowledge/skillsicon";
+import { MySkills } from "./components/SectionSkillsAndKnowledge/skillsicon";
+import ClickCounter from "./components/ClickCounterButton/ClickCounterButton";
 
 //Data
-import { cardInfo } from "./data/data";
+// import { cardInfo } from "./data/data";
 
 // console.log(cardInfo);
 
@@ -70,29 +78,19 @@ function App() {
           </p>
         </article>
         <div className="wrapper">
-          <img className="hero" src={"./src/assets/Looking-right.png"} />
+          <img className="hero logo" src={"./src/assets/Looking-right.png"} />
         </div>
         <div className="wrapper cv-wrapper">
-          <a
-            href={"./src/assets/Standard CV space.pdf"}
-            target="_blank"
+          <Cv
+            href="./src/assets/Standard CV space.pdf"
+            src="./src/assets/Standard CV pic space.png"
             className="cv standard"
-          >
-            <img
-              className="cv standard"
-              src={"./src/assets/Standard CV pic space.png"}
-            />
-            {/* <p className="cv">Full CV</p> */}
-          </a>
-
-          <a
-            href={"./src/assets/Fancy CV space.png"}
-            target="_blank"
+          />
+          <Cv
+            href="./src/assets/Fancy CV space.png"
+            src="./src/assets/Fancy CV space.png"
             className="cv fancy"
-          >
-            <img className="cv fancy" src={"./src/assets/Fancy CV space.png"} />
-            {/* <p className="cv">Short CV</p> */}
-          </a>
+          />
         </div>
         <div className="wrapper">
           <article className="header_text">
@@ -124,56 +122,51 @@ function App() {
             <h2>Knowledge</h2>
             <h3>Code</h3>
             <div className="knowledge_wrapper">
-              <MySkillsImage
-                src="https://cdn-icons-png.flaticon.com/512/186/186320.png"
+              <KnowledgeIcon
+                src="https://cdn-icons-png.flaticon.com/512/136/136528.png"
                 alt="HyperText Markup Language"
               />
-              <MySkillsImage
-                src="https://cdn-icons-png.flaticon.com/512/802/802251.png"
+              <KnowledgeIcon
+                src="https://cdn-icons-png.flaticon.com/512/136/136527.png"
                 alt="Cascading StyleSheets"
               />
-              <MySkillsImage
-                src="https://cdn-icons-png.flaticon.com/512/1892/1892549.png"
+              <KnowledgeIcon
+                src="https://cdn-icons-png.flaticon.com/512/136/136530.png"
                 alt="JavaScript"
               />
             </div>
 
             <h3>Source code editors</h3>
             <div className="knowledge_wrapper">
-              <MySkillsImage
+              <KnowledgeIcon
                 src="https://cdn-icons-png.flaticon.com/512/3334/3334886.png"
                 alt="React"
               />
-              <MySkillsImage
-                src="https://cdn-icons-png.flaticon.com/512/906/906324.png"
-                alt="VSC"
+              <KnowledgeIcon src="./src/assets/VSC.png" alt="VSC" />
+              <KnowledgeIcon
+                src="https://seeklogo.com/images/V/vite-logo-BFD4283991-seeklogo.com.png"
+                alt="Vite"
               />
             </div>
 
             <h3>Design</h3>
             <div className="knowledge_wrapper">
-              <MySkillsImageLinked
+              <KnowledgeIconLinked
                 src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
                 alt="Figma"
                 href="https://www.figma.com/files/project/74340755/Joakim?fuid=1166284176523730225"
               />
-              <MySkillsImage
+              <KnowledgeIcon
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/600px-Canva_icon_2021.svg.png?20220821125247"
-                alt="ClickUp"
+                alt="Canva"
               />
-              <MySkillsImage
-                src="https://cdn-icons-png.flaticon.com/512/1147/1147155.png"
-                alt="Photoshop"
-              />
+              <KnowledgeIcon src="./src/assets/Photoshop.png" alt="Photoshop" />
             </div>
 
             <h3>Repository</h3>
             <div className="knowledge_wrapper">
-              <MySkillsImage
-                src="https://cdn-icons-png.flaticon.com/512/1680/1680899.png"
-                alt="Git"
-              />
-              <MySkillsImageLinked
+              <KnowledgeIcon src="./src/assets/Git.png" alt="Git" />
+              <KnowledgeIconLinked
                 src="https://cdn-icons-png.flaticon.com/512/4494/4494749.png"
                 alt="GitHub"
                 href="https://github.com/VilloKodeHode"
@@ -184,41 +177,23 @@ function App() {
           <div className="myskills">
             <h2>My skills</h2>
             <div className="knowledge_wrapper">
-              <div className="knowledge_wrapper">
-                <figure>
-                  <h3>Gruppearbeid</h3>
-                  <img
-                    src={
-                      "https://cdn-icons-png.flaticon.com/512/8450/8450164.png"
-                    }
-                  />
-                  <p>Jeg er veldig glad i å samarbeide med andre.</p>
-                </figure>
-              </div>
-              <div className="knowledge_wrapper">
-                <figure>
-                  <h3>Problemløsning</h3>
-                  <img
-                    src={
-                      "https://cdn-icons-png.flaticon.com/512/1352/1352004.png"
-                    }
-                  />
-                  <p>Problemløsning synes jeg er veldig lærerikt.</p>
-                </figure>
-              </div>
-              <div className="knowledge_wrapper">
-                <figure>
-                  <h3>Responsive design</h3>
-                  <img
-                    src={
-                      "https://cdn-icons-png.flaticon.com/512/2696/2696459.png"
-                    }
-                  />
-                  <p>
-                    Jeg jobber for at det jeg lager skal kunne være resposivt
-                  </p>
-                </figure>
-              </div>
+              <MySkills
+                title="Gruppearbeid"
+                src="https://cdn-icons-png.flaticon.com/512/8450/8450164.png"
+                description="Jeg er veldig glad i å samarbeide med andre"
+              />
+
+              <MySkills
+                title="Problemløsning"
+                src="https://cdn-icons-png.flaticon.com/512/1352/1352004.png"
+                description="Problemløsning synes jeg er veldig lærerikt"
+              />
+
+              <MySkills
+                title="Responsive design"
+                src="https://cdn-icons-png.flaticon.com/512/2696/2696459.png"
+                description="Jeg jobber for at det jeg lager skal kunne være resposivt"
+              />
             </div>
           </div>
         </section>
@@ -285,7 +260,7 @@ function App() {
         <h2 className="footer-logo">
           <span>JV</span>
         </h2>
-        {clickCounter()}
+        {ClickCounter()}
         <LifeCycle>
           <Card title="LifeCycle" text="The human lifecycle" />
           <img src="https://cdn-icons-png.flaticon.com/512/2102/2102727.png" />
@@ -326,16 +301,3 @@ function LifeCycle(props) {
 }
 
 //! kan jeg bruke en if statement for å ta bort p className description?
-
-// <button className="pitch-btn" id="pitch-btn"></button>
-
-function clickCounter() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div className="footer-clicker">
-      <p>Clicked: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
-    </div>
-  );
-}
